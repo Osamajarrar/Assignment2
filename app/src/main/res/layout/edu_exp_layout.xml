@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.EduExp"
+    android:background="@color/teal_700">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/ic_launcher_foreground" />
+        <TextView
+            android:id="@+id/cv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Create Your CV"
+            android:textColor="#FFF"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+        <TextView
+            android:id="@+id/eeinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Education &amp; Experience"
+            android:textColor="#FFF"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cv" />
+
+        <TextView
+            android:id="@+id/txtEducation"
+            style="@style/field_title"
+            android:text="Education"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/eeinfo" />
+
+        <EditText
+            android:id="@+id/edtTxtEducation"
+            style="@style/input_field"
+            android:hint="Please Fill In Your Education Info"
+            android:inputType="textMultiLine"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtEducation" />
+
+        <TextView
+            android:id="@+id/txtExperience"
+            style="@style/field_title"
+            android:text="Experience"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtTxtEducation" />
+
+        <EditText
+            android:id="@+id/edtTxtExperience"
+            style="@style/input_field"
+            android:hint="Please Fill In Your Experience Info"
+            android:inputType="textMultiLine"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtExperience" />
+
+        <TextView
+            android:id="@+id/txtSkills"
+            style="@style/field_title"
+            android:text="Skills"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtTxtExperience" />
+
+        <EditText
+            android:id="@+id/edtTxtSkills"
+            style="@style/input_field"
+            android:hint="Please Fill In Your Skills"
+            android:inputType="textMultiLine"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtSkills" />
+
+        <TextView
+            android:id="@+id/txtLanguages"
+            style="@style/field_title"
+            android:text="Languages"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtTxtSkills" />
+
+        <EditText
+            android:id="@+id/edtTxtLanguages"
+            style="@style/input_field"
+            android:hint="What Languages Do You Know?"
+            android:inputType="textMultiLine"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtLanguages" />
+
+        <TextView
+            android:id="@+id/txtReferences"
+            style="@style/field_title"
+            android:text="References"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtTxtLanguages" />
+
+        <EditText
+            android:id="@+id/edtTxtReferences"
+            style="@style/input_field"
+            android:hint="Please List Your References"
+            android:inputType="textMultiLine"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtReferences" />
+
+        <CheckBox
+            android:id="@+id/rememberInfo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Remember Information"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            app:buttonTint="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtTxtReferences" />
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:gravity="center"
+            android:onClick="submit_onClick"
+            android:text="Submit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rememberInfo2" />
+
+        <Button
+            android:id="@+id/btnExit"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:onClick="exit_onClick"
+            android:text="Exit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rememberInfo2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
